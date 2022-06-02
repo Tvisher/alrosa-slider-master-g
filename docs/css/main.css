@@ -1,31 +1,31 @@
 @font-face {
-  font-family: "Ubuntu";
+  font-family: "Avenir";
   font-display: swap;
-  src: url("../fonts/Ubuntu-Bold.woff2") format("woff2"), url("../fonts/Ubuntu-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/Avenir-Roman.woff2") format("woff2"), url("../fonts/Avenir-Roman.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Ubuntu";
+  font-family: "Golos";
   font-display: swap;
-  src: url("../fonts/Ubuntu-Medium.woff2") format("woff2"), url("../fonts/Ubuntu-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/Golos-Text_Black.woff2") format("woff2"), url("../fonts/Golos-Text_Black.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Ubuntu";
+  font-family: "Radley";
   font-display: swap;
-  src: url("../fonts/Ubuntu-Light.woff2") format("woff2"), url("../fonts/Ubuntu-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
+  src: url("../fonts/Radley-Italic.woff2") format("woff2"), url("../fonts/Radley-Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
 }
 
 @font-face {
-  font-family: "Ubuntu";
+  font-family: "Radley";
   font-display: swap;
-  src: url("../fonts/Ubuntu-Regular.woff2") format("woff2"), url("../fonts/Ubuntu-Regular.woff") format("woff");
+  src: url("../fonts/Radley-Regular.woff2") format("woff2"), url("../fonts/Radley-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -314,6 +314,10 @@ body {
   width: 37%;
 }
 
+.slider-slides[data-step="3"] .segmental__text-block {
+  padding-left: 4vw;
+}
+
 .slider-slides[data-step="4"] .slide-2 {
   opacity: 1;
   visibility: visible;
@@ -365,6 +369,10 @@ body {
 
 .slider-slides[data-step="6"] .slide-3 .segmental__right-image {
   width: 37%;
+}
+
+.slider-slides[data-step="6"] .segmental__text-block {
+  padding-left: 4vw;
 }
 
 .slider-slides[data-step="7"] .slide-3 {
@@ -420,6 +428,10 @@ body {
   width: 37%;
 }
 
+.slider-slides[data-step="9"] .segmental__text-block {
+  padding-left: 4vw;
+}
+
 .slider-slides[data-step="10"] .slide-4 {
   opacity: 1;
   visibility: visible;
@@ -473,6 +485,10 @@ body {
   width: 37%;
 }
 
+.slider-slides[data-step="12"] .segmental__text-block {
+  padding-left: 4vw;
+}
+
 .slider-slides[data-step="13"] .slide-5 {
   opacity: 1;
   visibility: visible;
@@ -509,15 +525,20 @@ body {
   margin-left: 0;
 }
 
+.slider-component__wrapper {
+  background-color: #fff;
+  border: 4px solid #333333;
+  border-radius: 17px;
+  overflow: hidden;
+}
+
 .slider-slide {
   position: absolute;
-  top: 4px;
-  left: 4px;
-  bottom: 4px;
-  right: 4px;
-  border: 4px solid #333333;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   background-color: #fff;
-  border-radius: 17px;
   overflow: hidden;
   flex: 0 0 100%;
   display: flex;
@@ -541,7 +562,7 @@ body {
 .segmental__left-image,
 .segmental__text-block,
 .segmental__right-image {
-  transition: width 1.2s ease-in-out, opacity 1s ease-in-out, transform 1s ease;
+  transition: width 1.2s ease-in-out, opacity 1s ease-in-out, transform 1s ease, padding 1.2s ease-in-out;
   background-color: #fff;
 }
 
@@ -578,12 +599,13 @@ body {
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 60px;
+  padding-left: 8vw;
 }
 
 .segmental__text-block .text__content {
-  max-width: 262px;
+  max-width: 18vw;
   width: 100%;
 }
 
@@ -600,4 +622,41 @@ body {
   width: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+.text__content .text__content-title {
+  font-family: Radley;
+  font-style: italic;
+  font-size: calc((1vw + 1vh) * 0.55);
+  color: #000;
+  font-weight: 400;
+  margin-bottom: 9px;
+}
+
+.text__content .text__content-line {
+  height: 1px;
+  background-color: #000;
+  max-width: 151px;
+  margin-bottom: 9px;
+}
+
+.text__content .text__content-subtitle {
+  font-family: Avenir;
+  font-size: calc((1vw + 1vh) * 0.55);
+  margin-bottom: 9px;
+}
+
+.text__content .text__content-location {
+  font-size: calc((1vw + 1vh) * 0.85);
+  font-family: Radley;
+  font-weight: 400;
+  line-height: 140%;
+  margin-bottom: 9px;
+  letter-spacing: 1.88px;
+}
+
+.text__content .text__content-country {
+  font-size: calc((1vw + 1vh) * 0.55);
+  letter-spacing: 1.88px;
+  font-family: Radley;
 }

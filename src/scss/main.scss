@@ -101,6 +101,10 @@ body {
         width: 37%;
       }
     }
+    .segmental__text-block {
+      // padding-left: 60px;
+      padding-left: 4vw;
+    }
   }
 
   &[data-step="4"] {
@@ -152,6 +156,10 @@ body {
       .segmental__right-image {
         width: 37%;
       }
+    }
+    .segmental__text-block {
+      // padding-left: 60px;
+      padding-left: 4vw;
     }
   }
 
@@ -205,6 +213,10 @@ body {
         width: 37%;
       }
     }
+    .segmental__text-block {
+      // padding-left: 60px;
+      padding-left: 4vw;
+    }
   }
 
   &[data-step="10"] {
@@ -257,6 +269,10 @@ body {
         width: 37%;
       }
     }
+    .segmental__text-block {
+      // padding-left: 60px;
+      padding-left: 4vw;
+    }
   }
 
   &[data-step="13"] {
@@ -295,15 +311,26 @@ body {
   }
 }
 
+.slider-component__wrapper {
+  background-color: #fff;
+  border: 4px solid #333333;
+  border-radius: 17px;
+  overflow: hidden;
+}
+
 .slider-slide {
   position: absolute;
-  top: 4px;
-  left: 4px;
-  bottom: 4px;
-  right: 4px;
-  border: 4px solid #333333;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  // top: 4px;
+  // left: 4px;
+  // bottom: 4px;
+  // right: 4px;
+  // border: 4px solid #333333;
+  // border-radius: 17px;
   background-color: #fff;
-  border-radius: 17px;
   overflow: hidden;
   flex: 0 0 100%;
   display: flex;
@@ -326,7 +353,8 @@ body {
 .segmental__left-image,
 .segmental__text-block,
 .segmental__right-image {
-  transition: width 1.2s ease-in-out, opacity 1s ease-in-out, transform 1s ease;
+  transition: width 1.2s ease-in-out, opacity 1s ease-in-out, transform 1s ease,
+    padding 1.2s ease-in-out;
   background-color: #fff;
 }
 .segmental__left-image,
@@ -371,10 +399,13 @@ body {
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 60px;
+  // padding-left: 120px;
+  padding-left: 8vw;
   .text__content {
-    max-width: 262px;
+    // max-width: 262px;
+    max-width: 18vw;
     width: 100%;
   }
 }
@@ -391,5 +422,42 @@ body {
     width: 100%;
     object-fit: cover;
     object-position: center;
+  }
+}
+
+$index: calc((1vw + 1vh));
+
+.text__content {
+  .text__content-title {
+    font-family: Radley;
+    font-style: italic;
+    font-size: calc($index * 0.55);
+    color: #000;
+    font-weight: 400;
+    margin-bottom: 9px;
+  }
+  .text__content-line {
+    height: 1px;
+    background-color: #000;
+    max-width: 151px;
+    margin-bottom: 9px;
+  }
+  .text__content-subtitle {
+    font-family: Avenir;
+    font-size: calc($index * 0.55);
+    margin-bottom: 9px;
+  }
+  .text__content-location {
+    font-size: calc($index * 0.85);
+    font-family: Radley;
+    font-weight: 400;
+    line-height: 140%;
+    margin-bottom: 9px;
+    letter-spacing: 1.88px;
+  }
+  .text__content-country {
+    font-size: calc($index * 0.55);
+    letter-spacing: 1.88px;
+    font-family: Radley;
   }
 }
