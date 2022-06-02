@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitename</title>
+    <link rel="preload" href="./fonts/Ubuntu-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/main.min.css">
+    <script> </script>
+</head>
+
+<body>
+    <section class="slider-component">
+        <div class="slider-component__wrapper">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                    <div class="swiper-slide">Slide 4</div>
+                    <div class="swiper-slide">Slide 5</div>
+                    <div class="swiper-slide">Slide 6</div>
+                    <div class="swiper-slide">Slide 7</div>
+                    <div class="swiper-slide">Slide 8</div>
+                    <div class="swiper-slide">Slide 9</div>
+                    <div class="swiper-slide">Slide 10</div>
+                    <div class="swiper-slide">Slide 11</div>
+                    <div class="swiper-slide">Slide 12</div>
+                    <div class="swiper-slide">Slide 13</div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="slider-slides" id="cunstom-slider" data-step="1">
+                <div class="slider-slide fullscreen slide-1">
+                    <div class="slider-slide-bgi">
+                        <img src="img/slider-1-img.jpg" alt="">
+                    </div>
+                </div>
+                <div class="slider-slide segmental first-variant slide-2">
+                    <div class="segmental__left-image">
+                        <img src="img/bond.jpg" alt="">
+                    </div>
+                    <div class="segmental__text-block">
+
+                    </div>
+                    <div class="segmental__right-image">
+                        <img src="img/stones.jpg" alt="">
+                    </div>
+                </div>
+                <div class="slider-slide segmental second-variant slide-3">
+                    <div class="segmental__left-image">
+                        <img src="img/man.jpg" alt="">
+                    </div>
+                    <div class="segmental__text-block">
+
+                    </div>
+                    <div class="segmental__right-image">
+                        <img src="img/stones-2.jpg" alt="">
+                    </div>
+                </div>
+                <div class="slider-slide segmental second-variant slide-4">
+                    <div class="segmental__left-image">
+                        <img src="img/woman.jpg" alt="">
+                    </div>
+                    <div class="segmental__text-block">
+
+                    </div>
+                    <div class="segmental__right-image">
+                        <img src="img/stones-3.jpg" alt="">
+                    </div>
+                </div>
+                <div class="slider-slide segmental second-variant slide-5">
+                    <div class="segmental__left-image">
+                        <img src="img/woman-man.jpg" alt="">
+                    </div>
+                    <div class="segmental__text-block">
+
+                    </div>
+                    <div class="segmental__right-image">
+                        <img src="img/stones-4.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        const swiper = new Swiper(".mySwiper", {
+            direction: "vertical",
+            slidesPerView: 1,
+            spaceBetween: 30,
+            mousewheel: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            on: {
+                activeIndexChange(swiper) {
+                    const customSlider = document.querySelector('#cunstom-slider');
+                    customSlider.dataset.step = swiper.activeIndex + 1;
+                }
+            }
+        });
+
+        function gegAvtiveSlider(params) {
+
+        }
+    </script>
+</body>
+
+<script src="./js/app.min.js"></script>
+
+</html>
