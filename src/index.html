@@ -107,6 +107,7 @@
     </section>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
+        let sliderDirection = null;
         const swiper = new Swiper(".mySwiper", {
             slidesPerView: 1,
             speed: 1300,
@@ -120,12 +121,14 @@
                 activeIndexChange(swiper) {
                     const customSlider = document.querySelector('#custom-slider');
                     const stepIndex = swiper.activeIndex + 1
-                    if (stepIndex === 1 || stepIndex === 2 || stepIndex === 5 || stepIndex === 8 || stepIndex === 11 || stepIndex === 14) {
+                    console.log(sliderDirection < stepIndex);
+                    if ((stepIndex === 1 || stepIndex === 2 || stepIndex === 5 || stepIndex === 8 || stepIndex === 11 || stepIndex === 14) && sliderDirection < stepIndex) {
                         customSlider.style.opacity = '0'
                     }
                     setTimeout(() => {
                         customSlider.style.opacity = '1'
                         customSlider.dataset.step = stepIndex;
+                        sliderDirection = stepIndex;
                     }, 200);
                 }
             }

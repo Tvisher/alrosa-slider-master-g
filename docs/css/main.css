@@ -247,8 +247,17 @@ body {
   text-align: center;
   font-size: 18px;
   background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
   align-items: center;
 }
 
@@ -256,8 +265,7 @@ body {
   display: block;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .slider-slides {
@@ -526,10 +534,8 @@ body {
 .slider-slide-bgi img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
 }
 
 .segmental__left-image,
@@ -547,26 +553,21 @@ body {
 .first-variant .segmental__left-image img {
   transform: scaleY(1.01);
   height: 100%;
-  -o-object-position: center;
-     object-position: center;
+  object-position: center;
   margin-left: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .second-variant .segmental__left-image img {
   transform: scaleY(1.01);
   height: 100%;
   width: 100%;
-  -o-object-position: right;
-     object-position: right;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-position: right;
+  object-fit: cover;
 }
 
 .second-variant.slide-4 img {
-  -o-object-position: center;
-     object-position: center;
+  object-position: center;
 }
 
 .segmental__left-image {
@@ -597,8 +598,6 @@ body {
 .segmental__right-image img {
   height: 100%;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
 }
