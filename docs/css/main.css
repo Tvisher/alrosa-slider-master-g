@@ -222,7 +222,7 @@ body {
 .slider-component {
   position: relative;
   height: 0%;
-  padding-top: 47.5%;
+  padding-top: calc(100vh - 63px);
   background-color: #333333;
 }
 
