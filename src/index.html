@@ -6,14 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sitename</title>
-    <!-- <link rel="preload" href="./fonts/Ubuntu-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous"> -->
-
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/main.min.css">
     <script> </script>
 </head>
 
 <body>
+    <header style="height:63px; display: flex;align-items: center;justify-content: center;">HEADER</header>
     <section class="slider-component">
         <div class="slider-component__wrapper">
             <div class="swiper mySwiper">
@@ -34,11 +33,66 @@
                     <div class="swiper-slide">Step 14</div>
                 </div>
                 <div class="swiper-pagination"></div>
+                <div class="fake-pagination">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
             <div class="slider-slides" id="custom-slider" data-step="1">
-                <div class="slider-slide fullscreen slide-1">
+                <div class="slider-slide fullscreen main-slide slide-1">
                     <div class="slider-slide-bgi">
                         <img src="@img/slider-1-img.jpg" alt="">
+                    </div>
+                    <div class="main-slide__content">
+                        <span class="main-slide__nameplate">Fancy colored cushions weighing from 10 to 16 carats</span>
+                        <h1 class="main-slide__title">THE LONG,<br>
+                            HOT <br>
+                            SUMMER*
+                        </h1>
+                        <p class="main-slide__descr">Indulge in idle bliss from time to time, catching reflections of the sun in a glass with ice cubes, rewatching old movies and mentally transport yourself with the characters to the Côte d’Azur or an evening square in the Eternal City. Your favorite movie pictures and diamonds will help you catch the long, hot summer mood: yellow—sunny dawn, purple—sunset, colorless—icy and providing long-awaited coolness…</p>
+                        <span class="main-slide__footer-text">*The Long, Hot Summer: a film directed by Martin Ritt in 1958, starring Paul Newman</span>
                     </div>
                 </div>
                 <div class="slider-slide segmental first-variant slide-2">
@@ -138,7 +192,6 @@
                 activeIndexChange(swiper) {
                     const customSlider = document.querySelector('#custom-slider');
                     const stepIndex = swiper.activeIndex + 1
-                    console.log(sliderDirection < stepIndex);
                     if ((stepIndex === 1 || stepIndex === 2 || stepIndex === 5 || stepIndex === 8 || stepIndex === 11 || stepIndex === 14) && sliderDirection < stepIndex) {
                         customSlider.style.opacity = '0'
                     }
