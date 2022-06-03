@@ -56,6 +56,7 @@ $index: calc((1vw + 1vh));
     align-items: center;
     justify-content: center;
     span {
+      border: 1px solid #000000;
       width: calc($index * 1.15);
       height: calc($index * 1.35);
       border-radius: 2px;
@@ -172,6 +173,9 @@ $index: calc((1vw + 1vh));
       .segmental__right-image {
         width: 100%;
       }
+      .right-image__text {
+        opacity: 1;
+      }
     }
   }
 
@@ -228,6 +232,9 @@ $index: calc((1vw + 1vh));
         width: 100%;
       }
     }
+    .right-image__text {
+      opacity: 1;
+    }
   }
 
   &[data-step="8"] {
@@ -282,6 +289,9 @@ $index: calc((1vw + 1vh));
       .segmental__right-image {
         width: 100%;
       }
+    }
+    .right-image__text {
+      opacity: 1;
     }
   }
 
@@ -338,6 +348,9 @@ $index: calc((1vw + 1vh));
         width: 100%;
       }
     }
+    .right-image__text {
+      opacity: 1;
+    }
   }
 
   &[data-step="14"] {
@@ -354,6 +367,11 @@ $index: calc((1vw + 1vh));
           margin-right: auto;
           margin-left: 0;
         }
+      }
+      .right-image__text {
+        transition: transform 1s ease-in-out;
+        opacity: 1;
+        transform: translateX(0%);
       }
     }
   }
@@ -552,5 +570,67 @@ $index: calc((1vw + 1vh));
     font-weight: 400;
     font-size: calc($index * 0.73);
     line-height: 170%;
+  }
+}
+
+.slide-2 {
+  .right-image__text {
+    left: 86px;
+    bottom: 70px;
+  }
+}
+.slide-3 {
+  .right-image__text {
+    left: 86px;
+    top: 70px;
+  }
+}
+.slide-4 {
+  .right-image__text {
+    right: 130px;
+    bottom: 74px;
+  }
+}
+
+.slide-5 {
+  .right-image__text.left {
+    left: 86px;
+    bottom: 70px;
+  }
+
+  .right-image__text.right {
+    top: 86px;
+    right: 88px;
+  }
+}
+
+.slide-6 {
+  .segmental__text-block {
+    position: relative;
+    .right-image__text {
+      transform: translateX(-100%);
+      right: 106px;
+      bottom: 74px;
+      border-color: #030303;
+      .right-image__text-item {
+        color: #030303;
+      }
+    }
+  }
+}
+
+.right-image__text {
+  transition: opacity 0.1s ease-in-out;
+  border: 2px solid #fff;
+  padding: 40px 20px;
+  position: absolute;
+  opacity: 0;
+  .right-image__text-item {
+    letter-spacing: 1.88px;
+    font-family: Radley;
+    font-style: italic;
+    font-size: 14px;
+    line-height: 140%;
+    color: #fff;
   }
 }
