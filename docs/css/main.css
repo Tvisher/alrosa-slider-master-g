@@ -930,7 +930,8 @@ body {
   }
 
   .main-slide .main-slide__title {
-    font-size: calc((1vw + 1vh) * 2.5);
+    font-size: calc((1vw + 1vh) * 2.8);
+    line-height: 100%;
     margin-bottom: calc((1vw + 1vh) * 1);
   }
 
