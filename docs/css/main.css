@@ -840,7 +840,7 @@ body {
   font-weight: 400;
   font-size: calc((1vw + 1vh) * 0.73);
   line-height: 170%;
-  margin-bottom: calc((1vw + 1vh) * 1.6);
+  margin-bottom: calc(1vw + 1vh);
   max-width: 32vw;
   color: #000000;
 }

@@ -601,7 +601,7 @@ $index: calc((1vw + 1vh));
     font-weight: 400;
     font-size: calc($index * 0.73);
     line-height: 170%;
-    margin-bottom: calc($index * 1.6);
+    margin-bottom: $index;
     max-width: 32vw;
     color: #000000;
   }
